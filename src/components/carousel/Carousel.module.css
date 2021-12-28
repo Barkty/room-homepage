@@ -18,8 +18,8 @@
 }
 .carousel__indicators {
     position: relative;
-    top: -43px;
-    left: 100px;
+    top: -53px;
+    left: 125px;
     display: flex;
     justify-content: center;
 }
@@ -32,4 +32,10 @@
     background-color: hsl(0, 0%, 0%);
     color: hsl(0, 0%, 100%);
     z-index: 2;
+}
+@media screen and (max-width: 375px) {
+    .carousel__item {
+        display: flex;
+        flex-direction: column;
+    }   
 }

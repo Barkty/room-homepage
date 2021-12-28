@@ -1,6 +1,7 @@
 .home__wrapper {
     width: 100%;
     height: 100vh;
+    margin: 0;
     /* position: absolute;
     top: 0;
     left: 0; */
@@ -12,7 +13,7 @@
     width: 100%;
     height: 500px;
     position: relative;
-    top: 230px;
+    top: 210px;
 }
 .carousel__child {
     width: 55%;
@@ -33,7 +34,7 @@
     position: relative;
     top: -460px;
     right: -55%;
-    padding-left: 30px;
+    padding-left: 65px;
     padding-bottom: 55px;
 }
 .item__title {
@@ -60,7 +61,7 @@
     text-align: justify;
     line-height: 25px;
     text-transform: uppercase;
-    margin-top: -10px;
+    margin-top: -5px;
 }
 .item__link a {
     color: hsl(0, 0%, 27%);
@@ -68,4 +69,67 @@
 }
 .right {
     font-size: 18px;
+}
+.home__page {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: -13px;
+    padding: 0;
+}
+.home__image {
+    width: 30%;
+    height: auto;
+}
+.about__text__con {
+    width: 40%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.about__image {
+    width: 100%;
+    object-fit: contain;
+}
+.about__title {
+    font-family: 'Spartan';
+    font-size: 32px;
+    font-weight: 700;
+    color: hsl(0, 0%, 0%);
+    text-align: justify;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.about__text {
+    color: hsl(0, 0%, 63%);
+    font-family: 'Spartan';
+    font-size: 20px;
+    font-weight: 500;
+    text-align: left;
+    line-height: 25px;
+}
+
+@media screen and (max-width: 375px) {
+    .home__item {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 500px;
+    }
+    .carousel__child {
+        width: 100%;
+    }
+    .carousel__notes {
+        width: 100%;
+    }
+    .home__page {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .home__image {
+        width: 100%;
+    }
+    .about__text__con {
+        width: 100%;
+    }
 }
