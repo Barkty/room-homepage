@@ -22,17 +22,17 @@ const Carousel = ({ children}) => {
         setActiveIndex(newIndex);
     }
     
-    useEffect(() => {
-        const interval = setInterval(() => {
-            updateIndex(activeIndex + 1);
-        }, 1000);
+    // useEffect(() => {
+    //     const interval = setInterval(() => {
+    //         updateIndex(activeIndex + 1);
+    //     }, 1000);
 
-        return () => {
-            if (interval) {
-                clearInterval(interval);
-            }
-        }
-    });
+    //     return () => {
+    //         if (interval) {
+    //             clearInterval(interval);
+    //         }
+    //     }
+    // });
 
     return (
         <div className={styles.carousel}>
