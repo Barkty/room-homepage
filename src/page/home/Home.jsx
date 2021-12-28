@@ -1,49 +1,56 @@
 import styles from './Home.module.css'
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
-import 'pure-react-carousel/dist/react-carousel.es.css';
+//import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
+//import 'pure-react-carousel/dist/react-carousel.es.css';
 import hero from '../../components/images/desktop-image-hero-1.jpg'
+import heroImg from '../../components/images/desktop-image-hero-2.jpg'
 import Navbar from '../../components/navbar/Navbar';
 import { Link } from 'react-router-dom';
+import Carousel, { CarouselItem } from '../../components/carousel/Carousel';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Home = () => {
     
     return (
         <div className={styles.home__wrapper}>
             <Navbar />
-            <CarouselProvider totalSlides={3} naturalSlideHeight={35} naturalSlideWidth={100} className={styles.carousel__provider}>
-                <Slider>
-                    <Slide index={0} className={styles.slide__item}>
-                        <div className={styles.slide__parent}>
-                            <div className={styles.slide__child1}>
-                                <img src={hero} alt='Hero' className={styles.slide__img}/>
-                            </div>
-                            {/* <div className={styles.slide__child}>
-                                <div className={styles.container}>
-                                    <h2 className={styles.container__title}>Discover innovative ways to decorate</h2>
-                                    <p>We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love.</p>
-                                    <p className={styles.container__shop}><Link to='/shop'>Shop now</Link></p>
-                                </div>
-                            </div> */}
+            <Carousel>
+                <CarouselItem>
+                    <div className={styles.home__item}>
+                        <div className={styles.carousel__child}>
+                            <img src={hero} alt='Design' className={styles.carousel__image}/>
                         </div>
-                    </Slide>
-                    <Slide index={1}>
-                        <div className={styles.slide__parent}>
-                            <div className={styles.slide__child}>
-                                <img src={hero} alt='Hero' className={styles.slide__img}/>
-                            </div>
-                            <div className={styles.slide__child}></div>
+                        <div className={styles.carousel__notes}>
+                            <h2 className={styles.item__title}>Discover innovative<br/>ways to decorate</h2>
+                            <p className={styles.item__text}>We provide unmatched quality, comfort, <br/>and style for property owners across the country.<br/> Our experts combine form and function in bringing <br/>your vision to life. Create a room in your own <br/>style with our collection and make your property<br/> a reflection of you and what you love.</p>
+                            <p className={styles.item__link}><Link to='/'>Shop now <FontAwesomeIcon icon={['fas', 'arrow-right']} className={styles.right}/></Link></p>
                         </div>
-                    </Slide>
-                    <Slide index={2}>
-                        <div className={styles.slide__parent}>
-                            <div className={styles.slide__child}>
-                                <img src={hero} alt='Hero' className={styles.slide__img}/>
-                            </div>
-                            <div className={styles.slide__child}></div>
+                    </div>
+                </CarouselItem>
+                <CarouselItem>
+                    <div className={styles.home__item}>
+                        <div className={styles.carousel__child}>
+                            <img src={heroImg} alt='Design' className={styles.carousel__image}/>
                         </div>
-                    </Slide>
-                </Slider>
-            </CarouselProvider>
+                        <div className={styles.carousel__notes}>
+                            <h2 className={styles.item__title}>We are available<br/> all across the globe</h2>
+                            <p className={styles.item__text}>With stores all over the world, it's easy <br/>for you to find furniture for your home or <br/>place of business. Locally, we’re in most major <br/>cities throughout the country. Find the branch <br/>nearest you using our store locator. <br/>Any questions? Don't hesitate to contact us today.</p>
+                            <p className={styles.item__link}><Link to='/'>Shop now <FontAwesomeIcon icon={['fas', 'arrow-right']} className={styles.right}/></Link></p>
+                        </div>
+                    </div>
+                </CarouselItem>
+                <CarouselItem>
+                    <div className={styles.home__item}>
+                        <div className={styles.carousel__child}>
+                            <img src={hero} alt='Design' className={styles.carousel__image}/>
+                        </div>
+                        <div className={styles.carousel__notes}>
+                            <h2 className={styles.item__title}>Discover innovative<br/>ways to decorate</h2>
+                            <p className={styles.item__text}>We provide unmatched quality, comfort, <br/>and style for property owners across the country.<br/> Our experts combine form and function in bringing <br/>your vision to life. Create a room in your own <br/>style with our collection and make your property<br/> a reflection of you and what you love.</p>
+                            <p className={styles.item__link}><Link to='/'>Shop now <FontAwesomeIcon icon={['fas', 'arrow-right']} className={styles.right}/></Link></p>
+                        </div>
+                    </div>
+                </CarouselItem>
+            </Carousel>
         </div>
     )
 }
