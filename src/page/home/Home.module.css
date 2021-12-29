@@ -73,37 +73,40 @@
     display: flex;
     flex-direction: row;
     width: 100%;
+    height: 200px;
     margin-top: -13px;
     padding: 0;
     position: relative;
-    top: -53px;
+    top: -52px;
 }
 .home__image {
     width: 30%;
-    height: auto;
+    height: inherit;
 }
 .about__text__con {
     width: 40%;
+    height: inherit;
     padding: 15px;
     box-sizing: border-box;
 }
 .about__image {
     width: 100%;
-    object-fit: contain;
+    height: 265px;
+    object-fit: cover;
 }
 .about__title {
     font-family: 'Spartan';
-    font-size: 32px;
-    font-weight: 700;
+    font-size: 18px;
+    font-weight: 500;
     color: hsl(0, 0%, 0%);
-    text-align: justify;
+    text-align: left;
     text-transform: uppercase;
     letter-spacing: 3px;
 }
 .about__text {
     color: hsl(0, 0%, 63%);
     font-family: 'Spartan';
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     text-align: left;
     line-height: 25px;
@@ -162,7 +165,7 @@
         line-height: 25px;
     }
 }
-@media screen and (min-width: 374px) {
+@media screen and (max-width: 374px) {
     .carousel__notes {
         width: 100%;
         height: inherit;
