@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Children, cloneElement, useEffect, useState } from 'react';
+import { Children, cloneElement, useState } from 'react';
 import styles from './Carousel.module.css';
 
 export const CarouselItem = ({ children, width}) => {
