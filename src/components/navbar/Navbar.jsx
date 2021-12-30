@@ -7,8 +7,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Navbar = () => {
     const [isMobile, setIsMobile] = useState(false);
     const [active, setActive] = useState("Home");
+    const [hover, setHover] = useState('');
     const handleActive = (menu) => {
     setActive(menu);
+  };
+  const handleHover = (menu) => {
+    setHover(menu);
   };
 
     return (
@@ -19,20 +23,20 @@ const Navbar = () => {
                         <Link to="/"><Logo /></Link>
                     </div>
                     <ul className={isMobile ? `${styles.nav_links_mobile}` : `${styles.nav_links}`} onClick={() => setIsMobile(false)}>
-                        <li className={`${styles.nav_link} ${active === "Home" ? styles.active : ""}`} onClick={() => { handleActive("Home");}}>
+                        <li className={`${styles.nav_link} ${hover === "Home" ? styles.hover : ""} ${active === "Home" ? styles.hover : ""}`} onClick={() => { handleActive("Home");}} onMouseEnter={() => {handleHover('Home')}}>
                         <Link to="/">Home</Link>
                         </li>
-                        <li className={`${styles.nav_link} ${ active === "Shop" ? styles.active : ""}`}  onClick={() => {handleActive("Shop");}}>
+                        <li className={`${styles.nav_link} ${ hover === "Shop" ? styles.hover : ""}`}  onClick={() => {handleActive("Shop");}} onMouseEnter={() => {handleHover('Shop')}}>
                         <Link to="/shop" className="blog">
                             Shop
                         </Link>
                         </li>
-                        <li className={`${styles.nav_link} ${ active === "About" ? styles.active : ""}`}  onClick={() => {handleActive("About");}}>
+                        <li className={`${styles.nav_link} ${ hover === "About" ? styles.hover : ""}`}  onClick={() => {handleActive("About");}} onMouseEnter={() => {handleHover('About')}}>
                         <Link to="/about" className="blog">
                             About
                         </Link>
                         </li>
-                        <li className={`${styles.nav_link} ${ active === "Contact" ? styles.active : ""}`}  onClick={() => {handleActive("Contact");}}>
+                        <li className={`${styles.nav_link} ${ hover === "Contact" ? styles.hover : ""}`}  onClick={() => {handleActive("Contact");}} onMouseEnter={() => {handleHover('Contact')}}>
                         <Link to="/contact" className="blog">
                             Contact
                         </Link>

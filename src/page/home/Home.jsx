@@ -8,9 +8,14 @@ import Navbar from '../../components/navbar/Navbar';
 import { Link } from 'react-router-dom';
 import Carousel, { CarouselItem } from '../../components/carousel/Carousel';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useState } from 'react'
 
 const Home = () => {
-    
+    const [hover, setHover] = useState('');
+    const handleHover = (menu) => {
+        setHover(menu);
+    };
+
     return (
         <div className={styles.home__wrapper}>
             <Navbar />
@@ -23,7 +28,7 @@ const Home = () => {
                         <div className={styles.carousel__notes}>
                             <h2 className={styles.item__title}>Discover innovative<br/>ways to decorate</h2>
                             <p className={styles.item__text}>We provide unmatched quality, comfort, <br/>and style for property owners across the country.<br/> Our experts combine form and function in bringing <br/>your vision to life. Create a room in your own <br/>style with our collection and make your property<br/> a reflection of you and what you love.</p>
-                            <p className={styles.item__link}><Link to='/'>Shop now <FontAwesomeIcon icon={['fas', 'arrow-right']} className={styles.right}/></Link></p>
+                            <p className={`${styles.item__link}`}><Link to='/' className={`${styles.item__a} ${hover === "Shop" ? styles.hover : ""}`} onMouseEnter={() => {handleHover('Shop')}}>Shop now <FontAwesomeIcon icon={['fas', 'arrow-right']} className={styles.right}/></Link></p>
                         </div>
                     </div>
                 </CarouselItem>

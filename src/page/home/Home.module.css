@@ -1,6 +1,6 @@
 .home__wrapper {
     width: 100%;
-    height: 100vh;
+    max-height: 100vh;
     margin: 0;
     /* position: absolute;
     top: 0;
@@ -31,7 +31,7 @@
     height: inherit;
     box-sizing: border-box;
     position: relative;
-    top: -460px;
+    top: -500px;
     right: -55%;
     padding-left: 65px;
     padding-bottom: 55px;
@@ -40,17 +40,18 @@
     color: hsl(0, 0%, 0%);
     font-family: 'Spartan';
     font-weight: 700;
-    font-size: 32px;
+    font-style: normal;
+    font-size: 30px;
     text-align: justify;
     width: 70%;
 }
 .item__text {
     color: hsl(0, 0%, 63%);
     font-family: 'Spartan';
-    font-size: 20px;
+    font-size: 12px;
     font-weight: 500;
     text-align: justify;
-    line-height: 25px;
+    line-height: 20px;
     width: 70%;
 }
 .item__link {
@@ -61,8 +62,24 @@
     line-height: 25px;
     text-transform: uppercase;
     margin-top: -5px;
+    color: hsl(0, 0%, 27%);
+    position: relative;
+    top: 50px;
 }
-.item__link a {
+.hover {
+    /* font-family: 'Spartan';
+    font-size: 17px;
+    font-weight: 500;
+    text-align: justify;
+    line-height: 25px;
+    text-transform: uppercase;
+    margin-top: -5px;
+    position: relative;
+    top: 50px; */
+    color: hsl(0, 0%, 63%);
+    letter-spacing: 10px;
+}
+.item__a {
     color: hsl(0, 0%, 27%);
     letter-spacing: 5px;
 }
@@ -74,10 +91,10 @@
     flex-direction: row;
     width: 100%;
     height: 200px;
-    margin-top: -13px;
+    margin-top: -1px;
     padding: 0;
     position: relative;
-    top: -52px;
+    top: -82px;
 }
 .home__image {
     width: 30%;
@@ -86,7 +103,7 @@
 .about__text__con {
     width: 40%;
     height: inherit;
-    padding: 15px;
+    padding: 45px 15px 15px 15px;
     box-sizing: border-box;
 }
 .about__image {
@@ -96,8 +113,8 @@
 }
 .about__title {
     font-family: 'Spartan';
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 14px;
+    font-weight: 700;
     color: hsl(0, 0%, 0%);
     text-align: left;
     text-transform: uppercase;
@@ -106,10 +123,10 @@
 .about__text {
     color: hsl(0, 0%, 63%);
     font-family: 'Spartan';
-    font-size: 18px;
+    font-size: 12px;
     font-weight: 500;
     text-align: left;
-    line-height: 25px;
+    line-height: 18px;
 }
 
 @media screen and (max-width: 786px) {

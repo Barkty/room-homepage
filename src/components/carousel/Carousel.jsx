@@ -21,7 +21,11 @@ const Carousel = ({ children}) => {
 
         setActiveIndex(newIndex);
     }
-    
+    const [hover, setHover] = useState('');
+    const handleHover = (menu) => {
+        setHover(menu);
+    }
+
     // useEffect(() => {
     //     const interval = setInterval(() => {
     //         updateIndex(activeIndex + 1);
@@ -42,14 +46,14 @@ const Carousel = ({ children}) => {
                 })}
             </div>
             <div className={styles.carousel__indicators}>
-                <button onClick={() => {
+                <button className={`${styles.carousel__button} ${hover === 'Left' ? styles.carousel__button__hover : ''}`} onClick={() => {
                     updateIndex(activeIndex - 1);
-                }}>
+                }} onMouseEnter={() => {handleHover('Left')}}>
                     <FontAwesomeIcon icon={['fas', 'chevron-left']}/>
                 </button>
-                <button onClick={() => {
+                <button className={`${styles.carousel__button} ${hover === 'Right' ? styles.carousel__button__hover : ''}`} onClick={() => {
                     updateIndex(activeIndex + 1);
-                }}>
+                }} onMouseEnter={() => {handleHover('Right')}}>
                     <FontAwesomeIcon icon={['fas', 'chevron-right']}/>
                 </button>
             </div>
