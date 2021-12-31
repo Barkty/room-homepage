@@ -210,4 +210,9 @@
         line-height: 25px;
         width: 70%;
     }
+    .carousel__image {
+        width: 100%;
+        height: inherit;
+        object-fit: contain;
+    }
 }
