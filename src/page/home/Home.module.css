@@ -24,7 +24,7 @@
 .carousel__image {
     width: 100%;
     height: inherit;
-    /* object-fit: contain; */
+    object-fit: cover;
 }
 .carousel__notes {
     width: 45%;
