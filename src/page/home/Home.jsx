@@ -40,7 +40,7 @@ const Home = () => {
                         <div className={styles.carousel__notes}>
                             <h2 className={styles.item__title}>We are available<br/> all across the globe</h2>
                             <p className={styles.item__text}>With stores all over the world, it's easy <br/>for you to find furniture for your home or <br/>place of business. Locally, we’re in most major <br/>cities throughout the country. Find the branch <br/>nearest you using our store locator. <br/>Any questions? Don't hesitate to contact us today.</p>
-                            <p className={styles.item__link}><Link to='/'>Shop now <FontAwesomeIcon icon={['fas', 'arrow-right']} className={styles.right}/></Link></p>
+                            <p className={`${styles.item__link}`}><Link to='/' className={`${styles.item__a} ${hover === "Shop" ? styles.hover : ""}`} onMouseEnter={() => {handleHover('Shop')}}>Shop now <FontAwesomeIcon icon={['fas', 'arrow-right']} className={styles.right}/></Link></p>
                         </div>
                     </div>
                 </CarouselItem>
@@ -52,7 +52,7 @@ const Home = () => {
                         <div className={styles.carousel__notes}>
                             <h2 className={styles.item__title}>Manufactured with <br/>the best materials</h2>
                             <p className={styles.item__text}>Our modern furniture store provide a high level of quality. <br/>Our company has invested in advanced technology to ensure <br/>that every product is made as perfect and as consistent as possible. <br/>With three decades of experience in this industry, we understand <br/>what customers want for their home and office.</p>
-                            <p className={styles.item__link}><Link to='/'>Shop now <FontAwesomeIcon icon={['fas', 'arrow-right']} className={styles.right}/></Link></p>
+                            <p className={`${styles.item__link}`}><Link to='/' className={`${styles.item__a} ${hover === "Shop" ? styles.hover : ""}`} onMouseEnter={() => {handleHover('Shop')}}>Shop now <FontAwesomeIcon icon={['fas', 'arrow-right']} className={styles.right}/></Link></p>
                         </div>
                     </div>
                 </CarouselItem>
