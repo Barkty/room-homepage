@@ -17,7 +17,7 @@ const Home = () => {
     };
 
     return (
-        <main className={styles.home__wrapper} role='main'>
+        <main className={styles.home__wrapper} role={main}>
             <Navbar />
             <Carousel>
                 <CarouselItem>
@@ -57,7 +57,7 @@ const Home = () => {
                     </div>
                 </CarouselItem>
             </Carousel>
-            <div className={styles.home__page} role='complementary'>
+            <div className={styles.home__page} role={complementary}>
                 <div className={styles.home__image}>
                     <img alt='About' src={aboutDark} className={styles.about__image}/>
                 </div>
