@@ -39,7 +39,7 @@ const Carousel = ({ children}) => {
     // });
 
     return (
-        <div className={styles.carousel}>
+        <div className={styles.carousel} role='slider'>
             <div className={styles.carousel__inner} style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
                 {Children.map(children, (child, index) => {
                     return cloneElement(child, { width: '100%' })
@@ -48,12 +48,12 @@ const Carousel = ({ children}) => {
             <div className={styles.carousel__indicators}>
                 <button className={`${styles.carousel__button} ${hover === 'Left' ? styles.carousel__button__hover : ''}`} onClick={() => {
                     updateIndex(activeIndex - 1);
-                }} onMouseEnter={() => {handleHover('Left')}}>
+                }} onMouseEnter={() => {handleHover('Left')}}> Left
                     <FontAwesomeIcon icon={['fas', 'chevron-left']}/>
                 </button>
                 <button className={`${styles.carousel__button} ${hover === 'Right' ? styles.carousel__button__hover : ''}`} onClick={() => {
                     updateIndex(activeIndex + 1);
-                }} onMouseEnter={() => {handleHover('Right')}}>
+                }} onMouseEnter={() => {handleHover('Right')}}> Right
                     <FontAwesomeIcon icon={['fas', 'chevron-right']}/>
                 </button>
             </div>
