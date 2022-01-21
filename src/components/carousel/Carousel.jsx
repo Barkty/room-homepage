@@ -48,12 +48,12 @@ const Carousel = ({ children}) => {
             <div className={styles.carousel__indicators}>
                 <button className={`${styles.carousel__button} ${hover === 'Left' ? styles.carousel__button__hover : ''}`} onClick={() => {
                     updateIndex(activeIndex - 1);
-                }} onMouseEnter={() => {handleHover('Left')}}> Left
+                }} onMouseEnter={() => {handleHover('Left')}} aria-label="Left">
                     <FontAwesomeIcon icon={['fas', 'chevron-left']}/>
                 </button>
                 <button className={`${styles.carousel__button} ${hover === 'Right' ? styles.carousel__button__hover : ''}`} onClick={() => {
                     updateIndex(activeIndex + 1);
-                }} onMouseEnter={() => {handleHover('Right')}}> Right
+                }} onMouseEnter={() => {handleHover('Right')}} aria-label="Right">
                     <FontAwesomeIcon icon={['fas', 'chevron-right']}/>
                 </button>
             </div>
